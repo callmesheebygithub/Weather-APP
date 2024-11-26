@@ -127,7 +127,3 @@ This project is open-source and available under the [MIT License](LICENSE).
    httpx
    jinja2
    ```
-
-4. If possible, add a screenshot (`screenshot.png`) of the app in action for better presentation. 
-
-This **README.md** provides a step-by-step guide for users to set up and run your app!

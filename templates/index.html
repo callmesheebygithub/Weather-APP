@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="weather-form">
+    <form method="post" action="/get-weather">
+        <input type="text" name="city" placeholder="Enter City" required>
+        <input type="text" name="country" placeholder="Enter Country Code (e.g., EN)" required>
+        <button type="submit">Get Weather</button>
+    </form>
+</section>
+
+{% if weather %}
+<section class="weather-result">
+    {% if weather.error %}
+        <p class="error">{{ weather.error }}</p>
+    {% else %}
+        <h2>Weather in {{ weather.city }}</h2>
+        <p>Temperature: {{ weather.temp }}°C</p>
+        <p>Description: {{ weather.desc }}</p>
+        <p>Humidity: {{ weather.humidity }}%</p>
+    {% endif %}
+</section>
+{% endif %}
+{% endblock %}
